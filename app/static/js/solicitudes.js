@@ -1,4 +1,5 @@
 import { obtenerSolicitudes, aprobarSolicitudes, rechazoSolicitudes } from "./API.js" 
+import "./paginador.js"
 
 
 const tablaSolicitudes = document.querySelector('.cuerpo-tabla')
@@ -15,6 +16,11 @@ const muestraSolicitudes = async () => {
  
     const tipo = parseInt(solicitudes.value)
     console.log(solicitudes.value)
+    let options={
+        numberPerPage:3, 
+        goBar:false, 
+        pageCounter:true
+    }
 
     if(tipo === 1){
         limpiarHtml()
@@ -105,6 +111,7 @@ const muestraSolicitudes = async () => {
             })
         
     }
+    lignePaginate(".table",options)
     
 }
 

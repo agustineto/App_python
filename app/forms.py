@@ -3,7 +3,6 @@ from wtforms import Form
 from wtforms import validators
 from wtforms import StringField, PasswordField
 from wtforms.fields import EmailField, BooleanField
-from wtforms.validators import email_validator
 from .models import User
 
 class LoginForm(Form):
