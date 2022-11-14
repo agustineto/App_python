@@ -51,7 +51,5 @@ class RegisterForm(Form):
     def validate(self):
         if not Form.validate(self):
             return False
-        if len(self.password) < 3:
-            self.password.errors.append('El password es demasiado corto')
-            return False
+ 
         return True
