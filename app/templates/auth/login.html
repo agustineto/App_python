@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% from 'helpers/_form.html' import render_field %}
+
+{% block script %}
+<script>
+    $(document).ready(function(){
+        $('.body').removeClass('fondo-gradiente')
+        $('.body').addClass('fondo-custom')
+        }
+    );
+</script>
+{% endblock %}
+{% block container %}
+    <div class="row mt-5 login justify-content-center">
+        <div class="col-md-6 col-10  ">
+            <div class="card card-outline-login p-4">
+                <span class="text-center">
+                    <img class="circular-square"
+                    src="{{ url_for('static', filename='img/user.svg') }}" alt="">
+                </span>
+                <form method="post">
+                    <h2>Inicia tu sesión</h2>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    
+                    <div class="form-group">
+                    {{ render_field(form.username, class="form-control", placeholder='Ingresa tu usuario')}}
+                    </div>
+                    <div class="form-group">
+                        {{ render_field(form.password, class="form-control", placeholder='Ingresa tu contraseña')}}
+                    </div>
+                 
+                    <button class="btn btn-md btn-primary btn-block" type="submit" name="button">Iniciar sesión</button>
+                  
+                    <div class="form-group mt-4">
+                        <p class="roboto">¿No tienes una cuenta? <a class="login-registrate" href="{{ url_for('.register') }}">Regístrate</a> </p>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}

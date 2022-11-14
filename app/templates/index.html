@@ -1,0 +1,109 @@
+{% extends 'layout.html'%}
+
+
+
+{% block container %}
+<div class="row px-0">
+    <div class="col-12 ">
+        <div class="carousel-item d-block fondo-slide_1">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-4 mt-5">
+                    <div class="bg-white rounded p-5 mx-3 my-5 card-outline">
+                        <h3><span class="linea mr-1"></span>Aprovecha!</h3>
+                        <p class="banner">Solicita ahora tu
+                             <strong class="font-banner">tarjeta</strong> desde la app.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row bg-white d-flex justify-content-center p-4 row-menu">
+    <div class="col-10 m-4">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="text-center div-menu-1">
+                    <img class="icono-menu agrandar" src="../static/img/credit-card.svg"></img>
+                     <p class="texto">Busco una tarjeta</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center div-menu-2">
+                    <img class="icono-menu agrandar" src="../static/img/credit.svg"></img>
+                     <p class="texto2">Necesito un crédito</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center div-menu-3">
+                    <img class="icono-menu agrandar" src="../static/img/coin_money.png"></img>
+                     <p class="texto3">Mi plan es ahorrar</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="text-center div-menu-4">
+                    <img class="icono-menu agrandar" src="../static/img/wallet.svg"></img>
+                     <p class="texto4">Quiero invertir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+<div class="row mt-5 justify-content-center align-items-center">
+    <div class="col-5">
+        <div class="bg-white p-5 rounded tarjeta">
+            <h3 class="card-title"><span class="linea mr-1"></span>Crédito Banca Móvil</h3>
+            <p class="mt-5 Roboto card-texto">Te permite <strong class="">hacer realidad</strong>  ese viaje,
+                        la remodelación soñada o ese proyecto especial.</p>
+        </div>
+    </div>
+
+    <div class="col-4 text-center">
+        <img class="img-fluid" src="../static/img/dinero-felicidad-b.png"> 
+    </div>
+</div>
+<script>
+   
+    const hoverImg = document.querySelector('.div-menu-1')
+    hoverImg.addEventListener("mouseover", (e) => {
+         if(e.target.classList.contains('agrandar')){
+            document.querySelector('.texto').classList.add('texto-menu')
+         }else{
+            document.querySelector('.texto').classList.remove('texto-menu')
+         }
+    })
+
+    const hoverImg2 = document.querySelector('.div-menu-2')
+    hoverImg2.addEventListener("mouseover", (e) => {
+         if(e.target.classList.contains('agrandar')){
+            document.querySelector('.texto2').classList.add('texto-menu')
+         }else{
+            document.querySelector('.texto2').classList.remove('texto-menu')
+         }
+    })
+    const hoverImg3 = document.querySelector('.div-menu-3')
+    hoverImg3.addEventListener("mouseover", (e) => {
+         if(e.target.classList.contains('agrandar')){
+            document.querySelector('.texto3').classList.add('texto-menu')
+         }else{
+            document.querySelector('.texto3').classList.remove('texto-menu')
+         }
+    })
+    const hoverImg4 = document.querySelector('.div-menu-4')
+    hoverImg4.addEventListener("mouseover", (e) => {
+         if(e.target.classList.contains('agrandar')){
+            document.querySelector('.texto4').classList.add('texto-menu')
+         }else{
+            document.querySelector('.texto4').classList.remove('texto-menu')
+         }
+    })
+
+
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,179 @@
+.card-outline-blue{
+    border-color: #17a2b8 !important;
+    box-shadow: 5px -5px #17a2b8;
+}
+
+.card-outline{
+    border-color: #072146 !important;
+    box-shadow: 5px -5px #072146;
+}
+
+.card-texto{
+    font-size: 1.3em;
+  
+}
+
+.tarjeta{
+    box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+}
+
+.outline-blue{
+    border-color: #17a2b8 !important;
+}
+
+.font-blue{
+    color: #17a2b8;
+}
+
+.bg-blue{
+    background-color: #162eb4 !important;
+    color: #fff;
+}
+
+.card-outline-login{
+    border-color: #17a2b8 !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.circular-square {
+    /* border-radius: 50%; */
+    height: 7em;
+    margin-top: -7em; 
+    box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	/* img { width: 100%; height: auto; } */
+ }
+  
+
+ .circular-register {
+    border-radius: 50%;
+    height: 2em;
+    margin-top: -2em;
+ }
+   
+.login-registrate{
+    font-weight: bold;
+    font: bold;
+    color: #4364C9;
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+
+.solicitud-aprobada{
+    color: #17b860 !important;
+   
+}
+
+.solicitud-proceso{
+    color: #162eb4 !important;
+   
+}
+.solicitud-rechazada{
+    color: #b81717 !important;
+   
+}
+.list-customized{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    list-style-type: circle;
+}
+
+.check{
+    max-height: 1.5em;
+}
+
+/*Paginado*/
+div.paginate{
+    padding: 5px 0px;
+    margin: auto;
+}
+div.paginate input[type='button']:hover{
+    cursor: pointer;
+}
+div.paginate input[type='button']{
+    margin: 0px 2px;
+    border: none;
+    color: #03A9F4;
+    background-color: transparent;
+    border-radius: 50%;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    outline: none;
+}
+
+div.paginate input[type='button'].active{
+    background-color: #17a2b8;
+    color: #fff;
+    font-weight: bold;
+}
+div.paginate input[type='button']:disabled{
+    color: grey!important;
+    cursor: not-allowed;
+}
+
+div.paginate input[type='number']#paginate_page_to_go{
+    max-width: 3rem;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgba(128, 128, 128, 0.65);
+    padding: 3px;
+}
+
+/*Index*/
+.titulo{
+    font-size: 3.7rem;
+}
+@font-face{
+    font-family:'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+.Roboto{
+    font-family: 'Roboto';
+}
+
+.font-size-1{
+    font-size: 1.8rem;
+}
+
+.list-style{
+    list-style-image: url(../img/estrella.png);
+}
+
+.fondo-custom{
+    background-image: url(../img/fondo-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.icono-menu{
+    height: 3.2em;
+}
+
+.icono-menu-2{
+    height: 2em;
+}
+
+.agrandar:hover{
+    cursor: pointer;
+    height: 4em;
+    margin-bottom: .6em;
+    
+}
+
+.row-menu{
+    height: 12em;
+}
+
+.texto-menu{
+    color: #162eb4;
+}

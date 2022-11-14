@@ -1,0 +1,176 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+@font-face{
+    font-family:'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+.Roboto{
+    font-family: 'Roboto';
+}
+
+.fondo-gradiente{
+    height: 200px;
+    background-color: #67C8EC; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right,#4BA2C3, #4364C9);
+}
+
+.logo{
+    height: 4em;
+    margin-left: 2.2em;
+  
+}
+
+.color-nav{
+    background-color: #072146 !important;
+    color: white;
+}
+
+.fondo-slide_1{
+    background-image: url("../img/fondo_1.jpg");
+    height: 22em;
+    width: 30em;
+}
+
+.banner{
+    font-size: 1.5em;
+    
+}
+
+.font-banner{
+    color: #4BA2C3;
+}
+
+.font-banner-dos{
+    color: #df1717fa;
+}
+
+
+
+.linea {
+    border-left: 2px solid #4364C9;
+ 
+}
+
+.logos-redes{
+    height: 2em;
+}
+
+.item:hover{
+    color: #f8cd51 !important;
+}
+
+/* BOTON CUSTOM UNO */
+
+.boton {
+	border: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.boton a {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+    color: #fff;
+    text-decoration: none;
+}
+
+.boton-link{
+    text-decoration-line: none !important;
+}
+
+.boton.custom {
+	background: none;
+    height: 2.6em;
+    width: 7.3em;
+    border-radius: .3em;
+}
+
+.boton.custom svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.boton.custom rect {
+	width: 100%;
+	height: 100%;
+	stroke: #f8cd51;
+	stroke-width: .3em;
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	transition: .9s ease all;
+}
+
+.boton.custom:hover rect {
+	stroke-dashoffset: 0;
+
+}  
+
+.boton.custom a:hover{
+    color: #f8cd51;
+}  
+
+/* BOTON CUSTOM DOS */
+
+.custom-dos{
+    text-decoration-line: none;
+}
+
+.boton.custom-dos {
+	background: none;
+    height: 2.6em;
+    width: 7.3em;
+    border-radius: .3em;
+}
+
+
+.boton.custom-dos::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .6s ease-in-out all;
+	border-radius: 100px;
+	transform-origin: center;
+}
+
+.boton.custom-dos:hover::after {
+	transform: scale(130);
+	background: #4BA2C3;
+}
+
+.boton.custom-dos a:hover{
+    color: #fff;
+}  
+
+.boton.custom-dos:hover {
+	/* background: #960909; */
+}
