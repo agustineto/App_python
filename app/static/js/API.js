@@ -1,3 +1,5 @@
+import { obtenerNumeroSolicitudes } from "./paginador.js"
+
 export const creaUsuario = async usuario => {
 
     try {

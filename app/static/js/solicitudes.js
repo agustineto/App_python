@@ -1,9 +1,10 @@
 import { obtenerSolicitudes, aprobarSolicitudes, rechazoSolicitudes } from "./API.js" 
-import "./paginador.js"
+import { paginador, obtenerNumeroSolicitudes } from './paginador.js'
 
 
 const tablaSolicitudes = document.querySelector('.cuerpo-tabla')
 const solicitudes = document.querySelector('.selectorSolicitudes')
+const numerosPaginacion = document.querySelector('#pagination-numbers')
 
 window.addEventListener( 'load', () => {   
     muestraSolicitudes()
@@ -13,20 +14,15 @@ window.addEventListener( 'load', () => {
 })
 
 const muestraSolicitudes = async () => {
- 
     const tipo = parseInt(solicitudes.value)
-    console.log(solicitudes.value)
-    let options={
-        numberPerPage:3, 
-        goBar:false, 
-        pageCounter:true
-    }
 
     if(tipo === 1){
         limpiarHtml()
         const listaSolicitudes = await obtenerSolicitudes()
+        obtenerNumeroSolicitudes(listaSolicitudes)
             listaSolicitudes.map( data  => {
                 if(data[7] === 3 ){
+                    
                     let date = new Date(data[4])
                     let dia =  date.getDay()
                     let mes =  date.getMonth()
@@ -49,14 +45,16 @@ const muestraSolicitudes = async () => {
                     tablaSolicitudes.appendChild(tr)
                 }
             })
-        
+        paginador()
     }
 
     if(tipo === 2){
         limpiarHtml()
         const listaSolicitudes = await obtenerSolicitudes()
+        obtenerNumeroSolicitudes(listaSolicitudes)
             listaSolicitudes.map( data  => {
                 if(data[7] === 2 ){
+
                     let date = new Date(data[4])
                     let dia =  date.getDay()
                     let mes =  date.getMonth()
@@ -76,23 +74,24 @@ const muestraSolicitudes = async () => {
                                     <td> <img class="check aprobar" id="aprobar" data-id="${data[9]}" src="../static/img/check.png"></img> </td>
                                     <td> <img class="check rechazar" id="rechazar" data-id="${data[9]}" src="../static/img/cancel.png"></img> </td>
                                     `
-                    tablaSolicitudes.appendChild(tr)
+                  tablaSolicitudes.appendChild(tr)        
                 }
             })
-        
+        paginador()
     }
 
     if(tipo === 0){
         limpiarHtml()
         const listaSolicitudes = await obtenerSolicitudes()
-            listaSolicitudes.map( data  => {
-    
+        obtenerNumeroSolicitudes(listaSolicitudes)
+        listaSolicitudes.map( data  => {
                     let date = new Date(data[4])
                     let dia =  date.getDay()
                     let mes =  date.getMonth()
                     let anio =  date.getFullYear()
                     let fecha = dia.toString.length > 1 ? dia : "0"+ dia +`/${mes}/${anio}`
                     const tr = document.createElement('tr')
+                    tr.classList.add('fila')
                     tr.innerHTML = `
                                     <td>${fecha}</td>
                                     <td>${data[0]} ${data[1]} ${data[2]}</td>
@@ -109,9 +108,9 @@ const muestraSolicitudes = async () => {
                     tablaSolicitudes.appendChild(tr)
                 
             })
-        
-    }
-    lignePaginate(".table",options)
+        paginador()
+    }  
+    
     
 }
 
@@ -158,6 +157,7 @@ function limpiarHtml(){
     while(tablaSolicitudes.firstElementChild){
         tablaSolicitudes.removeChild(tablaSolicitudes.firstElementChild)
     }
+    numerosPaginacion.innerHTML = '';
 }
 
 

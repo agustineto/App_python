@@ -9,7 +9,7 @@
 
                 <div class="row">
                     <div class="col-12 mt-3">
-                        
+
                         <div class="row mb-2">
                             <div class="col-2">
                                 <select class="form-control selectorSolicitudes">
@@ -19,7 +19,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
 
                         <table class="table outline-blue">
                             <thead class="table-info">
@@ -35,10 +35,28 @@
                                     <th scope="col">Rechazar</th>
                                 </tr>
                             </thead>
-                            <tbody class="cuerpo-tabla">
+                            <tbody class="cuerpo-tabla" id="paginated-list" data-current-page="1" aria-live="polite">
 
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <nav class="pagination-container">
+                            <button class="pagination-button" id="prev-button" aria-label="Previous page"
+                                title="Previous page">
+                                &lt;
+                            </button>
+
+                            <div id="pagination-numbers">
+
+                            </div>
+
+                            <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+                                &gt;
+                            </button>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -46,12 +64,5 @@
     </div>
 </div>
 <script src="{{ url_for('static', filename='js/solicitudes.js') }}" type="module"></script>
-<!-- <script>
-    let options = {numberPerPage:4,
-        goBar:false,
-        pageCounter:false};
 
-    paginate.init('.table',options);
-    alert($('.table').html())
-</script> -->
 {% endblock %}
